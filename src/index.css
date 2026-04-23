@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 210 20% 20%;
+    --card: 0 0% 100%;
+    --card-foreground: 210 20% 20%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 20% 20%;
+    --primary: 210 52% 24%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 215 14% 45%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 210 52% 24%;
+    --radius: 0.625rem;
+    --sidebar-background: 210 52% 24%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 210 52% 24%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 45% 30%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 210 40% 30%;
+    --sidebar-ring: 197 71% 73%;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-cream text-charcoal font-inter;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer components {
+  .container-main {
+    @apply max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-12;
+  }
+
+  .btn-primary {
+    @apply bg-coral text-white rounded-full px-8 py-3.5 font-semibold text-base
+           transition-all duration-300 ease-out
+           hover:bg-[#e55a42] hover:shadow-[0_4px_16px_rgba(242,112,89,0.3)] hover:-translate-y-0.5
+           active:translate-y-0;
+  }
+
+  .btn-secondary {
+    @apply bg-transparent text-navy border-2 border-navy rounded-full px-7 py-3 font-semibold text-base
+           transition-all duration-300 ease-out
+           hover:bg-navy hover:text-white;
+  }
+
+  .card-base {
+    @apply bg-white rounded-2xl shadow-card transition-all duration-300 ease-out
+           hover:shadow-card-hover hover:-translate-y-1;
+  }
+
+  .section-padding {
+    @apply py-12 md:py-20;
+  }
+}
+
+@layer utilities {
+  .font-playfair {
+    font-family: 'Playfair Display', serif;
+  }
+  .font-inter {
+    font-family: 'Inter', sans-serif;
+  }
+}
